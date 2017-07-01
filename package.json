@@ -1,0 +1,22 @@
+{
+  "name": "angular-boilerplate",
+  "version": "1.0.0",
+  "description": "rudynan angular boilerplate",
+  "scripts": {
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "start": "./node_modules/.bin/hs -a localhost -p 9000 -o"
+  },
+  "keywords": [
+    "rudynan",
+    "Micua",
+    "Angular",
+    "Boilerplate"
+  ],
+  "author": "rudynan <779245190@qq.com> (http://www.rudynan.win)",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  }
+}
