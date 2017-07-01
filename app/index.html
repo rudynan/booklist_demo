@@ -1,29 +1,72 @@
 <!DOCTYPE html>
-<html lang="zh-CN" ng-app="myApp">
+<html lang="zh-CN" ng-app="moviecat">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My AngularJS App</title>
+  <link rel="stylesheet" href="../app/bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="app.css">
 </head>
+
 <body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
 
-  <div ng-view></div>
+  <body>
 
-  <div>Angular boilerplate app: v<span app-version></span></div>
+    <div class="container">
 
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
-</body>
+      <!-- The justified navigation menu is meant for single line per list item.
+           Multiple lines will require custom code not provided by Bootstrap. -->
+      <div class="masthead nav">
+        <h3 class="text-muted">豆瓣电影</h3>
+        <nav>
+          <ul class="nav nav-justified">
+            <li class="active"><a href="#/in_theaters">正在热映</a></li>
+            <li><a href="#/coming_soon">即将上映</a></li>
+            <li><a href="#/top250">TOP</a></li>
+            <li><a href="#">口碑榜</a></li>
+            <li><a href="#">北美票房榜</a></li>
+            <li><a href="#">新片榜</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="row">
+        <!-- /.col-lg-6 -->
+        <div class="col-lg-12">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="搜索...">
+            <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Go!</button>
+            </span>
+          </div>
+          <!-- /input-group -->
+        </div>
+        <div class="jumbotron" >
+        <h1>MovieCat</h1>
+      </div>
+        <!-- /.col-lg-6 -->
+        <div class="col-sm-12  col-md-12  main"ng-view ></div>
+      </div>
+      <!-- /.row -->
+      <!-- Site footer -->
+      <footer class="footer">
+        <p>&copy; 2016 Company, Inc.</p>
+      </footer>
+
+    </div>
+    <!-- /container -->
+
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <!--主模块-->
+    <script src="app.js"></script>
+    <!--正在热映模块-->
+    <script src="in_theaters/controller.js"></script>
+    <script src="coming_soon/controller.js"></script>
+    <script src="top250/controller.js"></script>
+  </body>
+
 </html>
