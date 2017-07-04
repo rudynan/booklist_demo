@@ -16,7 +16,7 @@
             function ($scope, $route, $routeParams, httpservice) {
                 var count = 10;
                 var page = parseInt($routeParams.page);
-                console.log(page);
+                // console.log(page);
                 var start = (page - 1) * count;
                 // pagecount = Math.ceil(total / totlacount);
 
@@ -25,7 +25,7 @@
                 $scope.subjects = [];
                 $scope.message = '';
                 $scope.totlacount = 0;
-                $scope.title = '';
+                $scope.title = 'LODING...';
                 $scope.totalpages = 0;
                 $scope.currentpage = page;
 
