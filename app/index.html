@@ -35,10 +35,10 @@
       <div class="row">
         <!-- /.col-lg-6 -->
         <div class="col-lg-12">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="搜索...">
+          <div class="input-group"  ng-controller="searchcontroller">
+               <input type="text" class="form-control" placeholder="搜索..." ng-model="input"  ng-keyup="myKeyup($event)">
             <span class="input-group-btn">
-            <button class="btn btn-default" type="button">Go!</button>
+            <button class="btn btn-default" type="button"  ng-click="search()">Go!</button>
             </span>
           </div>
           <!-- /input-group -->
@@ -68,6 +68,7 @@
     </script>
     <!--正在热映模块-->
     <script src="movie_list/controller.js"></script>
+    <script src="movie_detail/controller.js"></script>
     
   </body>
 

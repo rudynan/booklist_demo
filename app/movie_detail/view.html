@@ -1,0 +1,19 @@
+
+<hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">{{movie.title}}<span class="text-muted"><br> <span  ng-show="!loading">别名 </span>{{movie.aka.join('、')}}</span></h2>
+          <p class="lead">{{movie.summary}}</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" ng-src="{{movie.images.large}}" alt="image">
+        </div>
+      </div>
+      <div class="mask" ng-show="loading">
+    <div class="sk-folding-cube loding">
+        <div class="sk-cube1 sk-cube"></div>
+        <div class="sk-cube2 sk-cube"></div>
+        <div class="sk-cube4 sk-cube"></div>
+        <div class="sk-cube3 sk-cube"></div>
+    </div>
+</div>

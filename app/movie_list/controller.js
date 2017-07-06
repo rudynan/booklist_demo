@@ -36,7 +36,7 @@
                 //       console.log(err);
                 //       $scope.message = '获取数据错误';
                 //   })
-                httpservice.jsonp('http://api.douban.com/v2/movie/'+$routeParams.category, { start: start, count: count }, function (data) {
+                httpservice.jsonp('http://api.douban.com/v2/movie/'+$routeParams.category, { start: start, count: count ,q:$routeParams.q}, function (data) {
                     // console.log(data);
                     $scope.subjects = data.subjects;
                     $scope.totlacount = data.total;
